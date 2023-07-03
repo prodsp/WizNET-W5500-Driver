@@ -7,6 +7,6 @@ This is a platform independent driver which means you can use it with nearly all
 ### How to integrate the driver
 
 ## Usefull Links
-WizNET W5500 product overview --> https://www.wiznet.io/product-item/w5500
+WizNET W5500 product overview --> https://www.wiznet.io/product-item/w5500/\n
 WizNET W5500 datasheet --> https://docs.wiznet.io/Product/iEthernet/W5500/datasheet
 
