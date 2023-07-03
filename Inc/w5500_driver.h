@@ -11,24 +11,24 @@
 
 /*Socket Commands--------------------------------------------------------------------------------*/
 
-#define OPEN				(0x01)
+#define OPEN				  (0x01)
 #define LISTEN				(0x02)
 #define CONNECT				(0x04)
 #define DISCON				(0x08)
-#define CLOSE				(0x10)
-#define SEND				(0x20)
+#define CLOSE				  (0x10)
+#define SEND				  (0x20)
 #define SEND_KEEP			(0x22)
-#define RECV				(0x40)
+#define RECV				  (0x40)
 
 /*Socket Status----------------------------------------------------------------------------------*/
 
-#define SOCK_CLOSED			(0x00)
-#define SOCK_INIT			(0x13)
-#define SOCK_LISTEN			(0x14)
+#define SOCK_CLOSED			  (0x00)
+#define SOCK_INIT			    (0x13)
+#define SOCK_LISTEN			  (0x14)
 #define SOCK_ESTABLISHED	(0x17)
 #define SOCK_CLOSE_WAIT		(0x1C)
-#define SOCK_FIN_WAIT		(0x18)
-#define SOCK_CLOSING		(0x1A)
+#define SOCK_FIN_WAIT		  (0x18)
+#define SOCK_CLOSING		  (0x1A)
 #define SOCK_TIME_WAIT		(0x1B)
 
 /*Functions--------------------------------------------------------------------------------------*/
@@ -70,33 +70,3 @@ void W5500_TcpipSocketRegInit(uint8_t socketNumber, uint16_t sourcePort);
 
 
 #endif /* W5500_DRIVER_INC_W5500_DRIVER_H_ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
