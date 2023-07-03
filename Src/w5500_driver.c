@@ -126,9 +126,6 @@ void W5500_SocketReopen(uint8_t socketNumber){
 	W5500_SocketCommand(socketNumber,CLOSE);
 	W5500_SocketCommand(socketNumber,OPEN);
 	W5500_SocketCommand(socketNumber,LISTEN);
-//	socket.S_RX_RD[0] = 0x08;
-//	socket.S_RX_RD[1] = 0;
-//	W5500_SPI_Send(S_RX_RD_ADDR, socket.S_BSB_REG, 2, socket.S_RX_RD);
 }
 
 void W5500_GetSocketStatus(uint8_t socketNumber, uint8_t* statusHandler){
@@ -184,9 +181,6 @@ void W5500_TcpipSocketRegInit(uint8_t socketNumber, uint16_t sourcePort){
 	/*This is the maximum size of the socket segment.*/
 	socket.S_MSSR[0]=0x05;
 	socket.S_MSSR[1]=0xB3;
-	/*Start the data reading from 0.*/
-//	socket.S_RX_RD[0]=0;
-//	socket.S_RX_RD[1]=0;
 	/*WIZnet's socket timeout. unit = 5s */
 	socket.S_KPALVTR=0x01;
 	/*Set the source port*/
@@ -195,25 +189,5 @@ void W5500_TcpipSocketRegInit(uint8_t socketNumber, uint16_t sourcePort){
 	W5500_SPI_Send(S_MR_ADDR, socket.S_BSB_REG, 1, &socket.S_MR);
 	W5500_SPI_Send(S_MSSR_ADDR, socket.S_BSB_REG, 1, socket.S_MSSR);
 	W5500_SPI_Send(S_PORT_ADDR, socket.S_BSB_REG, 2, socket.S_PORT);
-//	W5500_SPI_Send(S_RX_RD_ADDR, socket.S_BSB_REG, 2, socket.S_RX_RD);
 	W5500_SPI_Send(S_KPALVTR_ADDR, socket.S_BSB_REG, 1, &socket.S_KPALVTR);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
