@@ -22,6 +22,8 @@ struct SPI_Init{
  * SPI initialization.
  * */
 void SPI_Init(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin_x, SPI_HandleTypeDef* hspi1){
+	
+	/* This is an example for STM32 Nucleo-F429ZI:*/
 	SPI_Init_Params.GPIOx = GPIOx;
 	SPI_Init_Params.GPIO_PIN_x = GPIO_Pin_x;
 	SPI_Init_Params.hspi = hspi1;
