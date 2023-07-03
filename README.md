@@ -1,7 +1,7 @@
 # WizNET-W5500-Driver
 This repository contains a compact, platform independent and  easy to integrate driver for WizNet W5500 IC and Ethernet Shield.
 ## Introduction
-This driver is designed as an open-source project so feel free to suggest changes or provide feedback. The main goal was to create a driver which everyone can easily integrate and use. If you have a microcontroller which has SPI compatibility and you want to communicatin through Ethernet, but it has no Ethernet port, the WizNET W5500 Ethernet shield yould be a perfect solution for you. 
+This driver is designed as an open-source project so feel free to suggest changes or provide feedback. The main goal was to create a driver which everyone can easily integrate and use. If you have a microcontroller which has SPI compatibility and you want to communicatin through Ethernet, but it has no Ethernet port, the WizNET W5500 Ethernet shield could be a perfect solution for you and thanks to this driver the developement process won't take a bunch of time from you. 
 ## Use
 ### Platform independency
 This is a platform independent driver which means you can use it with nearly all type of microcontrollers. To reach this functionality we've separated the SPI communication as an independent transfer layer so you can implement the communication without a deep understanding of the driver.
