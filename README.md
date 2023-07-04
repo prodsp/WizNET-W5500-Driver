@@ -28,6 +28,13 @@ This layer generates the SPI frame for the send and receive methodes.
 * Data Streaming
    - W5500_Send() --> send data through Ethernet
    - W5500_Receive() --> reveice data through Ethernet
+ ### Advanced Driver API
+ * It contains several enumeration, structure and constant
+ * W5500_SocketNumberInit() --> it can initialize the socket number releted variables
+ * intFromArray() --> it creates an integer from a uint8_t array's elements
+ * W5500_SetCommonRegister() --> it provides direct access for the WizNET's Common registers
+ * W5500_SetSocketRegister() --> it provides direct access for the WizNET's Socket registers
+ * copyToArray() --> it can copy any type of integer to an uint8_t array
 ## Communication Parameters
 |Measurement|Value|Package size|
 |:----:|:----:|:----:|
