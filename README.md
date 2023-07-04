@@ -11,7 +11,7 @@ This is a platform independent driver which means you can use it with nearly all
 3. Use the driver API to initialize the sockets -_W5500_TcpipSocketRegInit()_- and the general settings -_W5500_TcpipCommonRegInit_-
    >* This init functions provide you a standard settings for TCP communication<br>
    >* For change this settings you can use the _W5500_SetCommonRegister()_ and the _W5500_SetSocketRegister_ functions<br>
-   >* For use UDP protocol, you can use the TCP init functions and overwrite the necessary registers or you must implement an other init function for UDP protocol
+   >* For UDP protocol, you can use the TCP init functions and overwrite the necessary registers or you must implement an other init function for UDP protocol
 4. Use the W5500_Driver API for Ethernet communication
 ### Advanced Driver Layer
 This layer has their own API which provide you a complete access for the WizNET's registers. With this API you can modify the Ethernet protocol settings, SPI protocol settings, memory management settings and so on.
