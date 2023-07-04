@@ -38,10 +38,10 @@ This layer generates the SPI frame for the send and receive methods.
 ## Communication Parameters
 |Measurement|Value|Package size|
 |:----:|:----:|:----:|
-|RTT|2.876 ms|1 byte|
-|RTT|3.008 ms|10 byte|
-|RTT|5.116 ms|100 byte|
-|RTT|23.884 ms|1000 byte|
+|RTT|2.306 ms|1 byte|
+|RTT|2.635 ms|10 byte|
+|RTT|4.069 ms|100 byte|
+|RTT|19.157 ms|1000 byte|
 |iRTT|0.6153 ms||
 |Sending Latency|0.6720 ms|1 byte|
 |Sending Latency|0.713 ms|10 byte|
