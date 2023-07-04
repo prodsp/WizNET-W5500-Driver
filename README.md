@@ -60,7 +60,7 @@ This layer generates the SPI frame for the send and receive methods.
 * Sending Latency
   - We implemented a timer on the STM32 microcontroller and measured the time before the _send_ command and when the _package sent flag_ turned true.
 * Throughput
-  - We measured how many packages and data can we send under 10 ms.
+  - We measured how many packages and data can we send from the WizNET to the PC under 10 ms. The timer and the time measurement was implemented on he STM32.
 ## Useful Links
 WizNET W5500 product overview --> https://www.wiznet.io/product-item/w5500/<br>
 WizNET W5500 datasheet --> https://docs.wiznet.io/Product/iEthernet/W5500/datasheet
