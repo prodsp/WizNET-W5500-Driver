@@ -1,7 +1,7 @@
 # WizNET-W5500-Driver
-This repository contains a compact, platform-independent and  easy to integrate driver for WizNet W5500 IC and Ethernet Shield.
+This repository contains a compact, platform-independent and easy to integrate driver for WizNet W5500 IC and Ethernet Shield.
 ## Introduction
-This driver is designed as an open-source project so feel free to suggest changes or provide feedback. The main goal was to create a driver that everyone can easily integrate and use. If you have a microcontroller which has SPI compatibility and you want to communicate through Ethernet, but it has no Ethernet port, the WizNET W5500 Ethernet shield could be a perfect solution for you and thanks to this driver the development process won't take a bunch of time from you. 
+This driver is designed as an open-source project so feel free to suggest changes or provide feedback. The main goal was to create a driver that everyone can easily integrate and use. If you have a microcontroller that has SPI compatibility and you want to communicate through Ethernet, but it has no Ethernet port, the WizNET W5500 Ethernet shield could be a perfect solution for you and thanks to this driver the development process won't take a bunch of time from you. 
 ## Use
 ### Platform independency
 This is a platform-independent driver which means you can use it with nearly all types of microcontrollers. To reach this functionality we've separated the SPI communication as an independent transfer layer therefore you can implement the communication without a deep understanding of the driver.
@@ -30,7 +30,7 @@ This layer generates the SPI frame for the send and receive methods.
    - W5500_Receive() --> receive data through Ethernet
  ### Advanced Driver API
  * It contains several enumerations, structures and constants
- * W5500_SocketNumberInit() --> it can initialize the socket number releted variables
+ * W5500_SocketNumberInit() --> it can initialize the socket number related variables
  * intFromArray() --> it creates an integer from a uint8_t array's elements
  * W5500_SetCommonRegister() --> it provides direct access to WizNET's Common registers
  * W5500_SetSocketRegister() --> it provides direct access to WizNET's Socket registers
@@ -51,8 +51,17 @@ This layer generates the SPI frame for the send and receive methods.
 |Throughput|1700 msg/sec|10 byte|
 |Throughput|1000 msg/sec|100 byte|
 |Throughput|200 msg/sec|1000 byte|
-|Chance of Data Loss|<0,000025%|
-## Usefull Links
+* Not a single package was lost from 4 000 000 transactions.
+### Measurement methods
+* RTT
+  - The Python client had sent a package to the host, and the host sent it back (Echo). We measured the time before the _send_ command and after the _receive_ command on the client side. The difference was the elapsed time.
+* iRTT
+  - We have measured it with Wireshark. Client SYNC --> Host ACK
+* Sending Latency
+  - We implemented a timer on the STM32 microcontroller and measured the time before the _send_ command and when the _package sent flag_ turned true.
+* Throughput
+  - We measured how many packages and data can we send under 10 ms.
+## Useful Links
 WizNET W5500 product overview --> https://www.wiznet.io/product-item/w5500/<br>
 WizNET W5500 datasheet --> https://docs.wiznet.io/Product/iEthernet/W5500/datasheet
 
