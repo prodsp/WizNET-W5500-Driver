@@ -17,6 +17,17 @@ This is a platform independent driver which means you can use it with nearly all
 This layer has their own API which provide you a complete access for the WizNET's registers. With this API you can modify the Ethernet protocol settings, SPI protocol settings, memory management settings and so on.
 ### SPI Low Level Layer
 This layer generates the SPI frame for the send and receive methodes.
+### Driver API
+* Initialization
+   - W5500_TcpipCommonRegInit() --> set the basic parameters of the WizNET (e.g. IP address or MAC address)
+   - W5500_TcpipSocketRegInit() --> set the basic TCP parameters of a socket (e.g. port)
+* Socket Handling
+   - W5500_SocketCommand()
+   - W5500_GetSocketStatus()
+   - W5500_SocketReopen()
+* Data Streaming
+   - W5500_Send()
+   - W5500_Receive()
 ## Communication Parameters
 |Measurement|Value|Package size|
 |:----:|:----:|:----:|
