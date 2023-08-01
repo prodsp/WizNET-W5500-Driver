@@ -28,8 +28,8 @@ void W5500_Example_Echo_Run(SPI_HandleTypeDef* hspi1){
 	W5500_TcpipCommonRegInit(0xc0a80001,0xffffff00,0x0008DC010203,0xc0a80016);
 	W5500_TcpipSocketRegInit(socketNumber, 15200);
 	/*Give the whole RX and TX memory for the socket 0.*/
-	W5500_SetSocketRegister(socketNumber, S_RXBUF_SIZE, 0x1010);
-	W5500_SetSocketRegister(socketNumber, S_TXBUF_SIZE, 0x1010);
+	W5500_SetSocketRegister(socketNumber, S_RXBUF_SIZE, 0x0010);
+	W5500_SetSocketRegister(socketNumber, S_TXBUF_SIZE, 0x0010);
 
 	W5500_SocketCommand(socketNumber,OPEN);
 	W5500_SocketCommand(socketNumber,LISTEN);
