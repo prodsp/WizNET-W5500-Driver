@@ -25,4 +25,6 @@ void W5500_SPI_Send(uint16_t offset_addres, uint8_t BSB,
 void W5500_SPI_Recieve(uint16_t offset_addres, uint8_t BSB,
 		uint16_t recv_dataLength, uint8_t* pDestination);
 
+
+
 #endif /* INC_W5500_SPI_LOWLEVEL_H_ */

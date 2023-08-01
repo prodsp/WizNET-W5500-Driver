@@ -12,7 +12,7 @@
 #include <W5500_spi_lowLevel.h>
 #include <SPI_Communication.h>
 
-/*Functions--------------------------------------------------------------------*/
+/*Functions-------------------------------------------------------------------*/
 void W5500_SPI_Send(uint16_t offset_address, uint8_t BSB,
 		uint16_t send_dataLength, uint8_t* pData){
 

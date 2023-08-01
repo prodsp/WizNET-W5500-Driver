@@ -13,7 +13,7 @@
  * */
 typedef struct{
 
-	uint8_t MR;					/*Mode register*/
+	uint8_t MR;						/*Mode register*/
 
 	uint8_t GAR[4];					/*Gateway IP Address Register*/
 
@@ -23,9 +23,9 @@ typedef struct{
 
 	uint8_t SIPR[4];				/*Source IP Address Register*/
 
-	uint8_t INTLEVEL[2];				/*Interrupt Low Level Timer Register*/
+	uint8_t INTLEVEL[2];			/*Interrupt Low Level Timer Register*/
 
-	uint8_t IR;					/*Interrupt Register*/
+	uint8_t IR;						/*Interrupt Register*/
 
 	uint8_t IMR;					/*Interrupt Mask Register*/
 
@@ -57,7 +57,7 @@ typedef struct{
  * */
 typedef struct{
 
-	uint8_t socketNumber;		/*{0,1,...,8}*/
+	uint8_t socketNumber;	/*{0,1,...,8}*/
 
 	uint8_t S_BSB_REG;		/*Socket n Register*/
 
@@ -83,7 +83,7 @@ typedef struct{
 				uint8_t : 3;
 			};
 		};
-	}S_IR;				/*Socket Interrupt Register*/
+	}S_IR;					/*Socket Interrupt Register*/
 
 	uint8_t S_PORT[2];		/*Socket Source Port Register*/
 
@@ -99,9 +99,9 @@ typedef struct{
 
 	uint8_t S_TTL;			/*Socket TTL Register*/
 
-	uint8_t S_RXBUF_SIZE;		/*Socket RX Buffer Size Register*/
+	uint8_t S_RXBUF_SIZE;	/*Socket RX Buffer Size Register*/
 
-	uint8_t S_TXBUF_SIZE;		/*Socket TX Buffer Size Register*/
+	uint8_t S_TXBUF_SIZE;	/*Socket TX Buffer Size Register*/
 
 	uint8_t S_TX_WR[2];		/*Socket TX Write Pointer Register*/
 
@@ -131,7 +131,7 @@ typedef struct{
 
 #define SIPR_ADDR			(0x000F)		/*Source IP Address Register*/
 
-#define INTLEVEL_ADDR			(0x0013)		/*Interrupt Low Level Timer Register*/
+#define INTLEVEL_ADDR		(0x0013)		/*Interrupt Low Level Timer Register*/
 
 #define IR_ADDR				(0x0015)		/*Interrupt Register*/
 
@@ -155,7 +155,7 @@ typedef struct{
 
 #define PMRU_ADDR			(0x0026)		/*Maximum Receive Unit in PPPoE mode*/
 
-#define PHYCFGR_ADDR			(0x002E)		/*W5500 PHY Configuration Register*/
+#define PHYCFGR_ADDR		(0x002E)		/*W5500 PHY Configuration Register*/
 
 /*Offset Addresses of a Socket Registers------------------------------------------------------------*/
 
@@ -173,7 +173,7 @@ typedef struct{
 
 #define S_DIPR_ADDR			(0x000C)		/*Socket Destination IP Address Register*/
 
-#define S_DPORT_ADDR			(0x0010)		/*Socket Destination Port Register*/
+#define S_DPORT_ADDR		(0x0010)		/*Socket Destination Port Register*/
 
 #define S_MSSR_ADDR			(0x0012)		/*Socket Maximum Segment Size Register*/
 
@@ -181,25 +181,25 @@ typedef struct{
 
 #define S_TTL_ADDR			(0x0016)		/*Socket TTL Register*/
 
-#define S_RXBUF_SIZE_ADDR		(0x001E)		/*Socket RX Buffer Size Register*/
+#define S_RXBUF_SIZE_ADDR	(0x001E)		/*Socket RX Buffer Size Register*/
 
-#define S_TXBUF_SIZE_ADDR		(0x001F)		/*Socket TX Buffer Size Register*/
+#define S_TXBUF_SIZE_ADDR	(0x001F)		/*Socket TX Buffer Size Register*/
 
-#define S_TX_WR_ADDR			(0x0024)		/*Socket TX Write Pointer Register*/
+#define S_TX_WR_ADDR		(0x0024)		/*Socket TX Write Pointer Register*/
 
-#define S_TX_RD_ADDR			(0x0022)		/*Socket TX Read Pointer Register*/
+#define S_TX_RD_ADDR		(0x0022)		/*Socket TX Read Pointer Register*/
 
-#define S_RX_RSR_ADDR			(0x0026)		/*Socket Received Size Register*/
+#define S_RX_RSR_ADDR		(0x0026)		/*Socket Received Size Register*/
 
-#define S_RX_RD_ADDR			(0x0028)		/*Socket RX Read Data Pointer Register*/
+#define S_RX_RD_ADDR		(0x0028)		/*Socket RX Read Data Pointer Register*/
 
-#define S_RX_WR_ADDR			(0x002A)		/*Socket RX Write Data Pointer Register*/
+#define S_RX_WR_ADDR		(0x002A)		/*Socket RX Write Data Pointer Register*/
 
 #define S_IMR_ADDR			(0x002C)		/*Socket Interrupt Mask Register*/
 
 #define S_FRAG_ADDR			(0x002D)		/*Socket Fragment Register*/
 
-#define S_KPALVTR_ADDR			(0x002F)		/*Socket Keep Alive Time Register*/
+#define S_KPALVTR_ADDR		(0x002F)		/*Socket Keep Alive Time Register*/
 
 /*Block Select Bits (BSB)------------------------------------------------------------------------*/
 
