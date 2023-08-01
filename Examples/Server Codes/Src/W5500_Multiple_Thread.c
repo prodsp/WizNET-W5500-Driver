@@ -28,7 +28,7 @@ void W5500_Multiple_Thread_Run(SPI_HandleTypeDef* hspi1){
 	uint8_t spi_recv1[(16*1024)];
 	uint8_t spi_send1[(16*1024)];
 	uint8_t socketStatus1;
-	uint64_t dataSizeCounter1 = 1;
+	uint64_t dataSizeCounter1 = 0xffffffffffffffff;
 	uint8_t socketNumber1 = 1;
 
 	SPI_Init(GPIOD, GPIO_PIN_14, hspi1);
@@ -58,7 +58,7 @@ void W5500_Multiple_Thread_Run(SPI_HandleTypeDef* hspi1){
 			if(recv_DataSize1 > 0){
 				copyToArray(&dataSizeCounter1, spi_send1, 8);
 				W5500_Send(socketNumber1, spi_send1, 8);
-				dataSizeCounter1++;
+				dataSizeCounter1--;
 			}
 		}
 		if((socketStatus0 == SOCK_CLOSE_WAIT) || (socketStatus0 == SOCK_CLOSED)){

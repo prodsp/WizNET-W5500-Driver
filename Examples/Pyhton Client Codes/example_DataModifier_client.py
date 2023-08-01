@@ -1,3 +1,7 @@
+'''
+Use W5500_example_DataModifier.c
+'''
+
 from base64 import encode
 from webbrowser import get
 '''
@@ -8,7 +12,6 @@ If you enter "close" string as a command, the client program closes the socket.
 '''
 
 import socket
-import time
 
 SERV_IP = "192.168.0.22"  # The server's hostname or IP address
 SERV_PORT = 15200  # The port used by the server

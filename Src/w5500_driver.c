@@ -128,6 +128,16 @@ void W5500_SocketReopen(uint8_t socketNumber){
 	W5500_SocketCommand(socketNumber,LISTEN);
 }
 
+void W5500_SocketReconnect(uint8_t socketNumber){
+
+	SocketRegisterInit_HandleTypeDef socket;
+	W5500_SocketNumberInit(&socket, socketNumber);
+
+	W5500_SocketCommand(socketNumber,CLOSE);
+	W5500_SocketCommand(socketNumber,OPEN);
+	W5500_SocketCommand(socketNumber,CONNECT);
+}
+
 void W5500_GetSocketStatus(uint8_t socketNumber, uint8_t* statusHandler){
 
 	SocketRegisterInit_HandleTypeDef socket;
@@ -190,4 +200,19 @@ void W5500_TcpipSocketRegInit(uint8_t socketNumber, uint16_t sourcePort){
 	W5500_SPI_Send(S_MSSR_ADDR, socket.S_BSB_REG, 1, socket.S_MSSR);
 	W5500_SPI_Send(S_PORT_ADDR, socket.S_BSB_REG, 2, socket.S_PORT);
 	W5500_SPI_Send(S_KPALVTR_ADDR, socket.S_BSB_REG, 1, &socket.S_KPALVTR);
+}
+
+void W5500_TcpipDestinationRegInit(uint8_t socketNumber, uint32_t destIpAddress, uint16_t destPort){
+
+	SocketRegisterInit_HandleTypeDef socket;
+	W5500_SocketNumberInit(&socket, socketNumber);
+
+	//Set destination IP address
+	copyToArray(&destIpAddress, socket.S_DIPR, 4);
+	//Set destination port
+	copyToArray(&destPort, socket.S_DPORT, 2);
+
+
+	W5500_SPI_Send(S_DIPR_ADDR, socket.S_BSB_REG, 4, socket.S_DIPR);
+	W5500_SPI_Send(S_DPORT_ADDR, socket.S_BSB_REG, 2, socket.S_DPORT);
 };
